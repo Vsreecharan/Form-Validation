@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1></h1>
+
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <table>
+            <tr>
+                <td><label for="userid">User id:</label></td>
+                <td>
+                    <div class="formstyle" id="userid">
+                        <input type="text" name="formuserid" id="nameinput" required 
+                               placeholder="Enter your user ID" 
+                               title="Your unique user ID">
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td>
+                    <div class="formstyle" id="password">
+                        <input type="password" name="formpassword" id="passinput" required 
+                               placeholder="Enter your password" 
+                               title="Password must be at least 8 characters long">
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td>
+                    <div class="formstyle" id="name">
+                        <input type="text" name="fname" required 
+                               placeholder="Enter your full name" 
+                               title="Enter your full legal name">
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td>
+                    <div class="formstyle" id="address">
+                        <input type="text" name="formaddress" 
+                               placeholder="Enter your address" 
+                               title="Enter your complete address">
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="country">Country:</label></td>
+                <td>
+                    <div class="formstyle" id="country">
+                        <label for="country"></label>
+                        <select name="country" id="country" title="Select your country">
+                            <option value="(Please choose a country)">(Please choose a country)</option>
+                            <option value="India">India</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Canada">Canada</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Australia">Australia</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Netherland">Netherland</option>
+                        </select>
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td>
+                    <div class="formstyle" id="email">
+                        <input type="email" name="formemail" required 
+                               placeholder="Enter your email" 
+                               title="Provide a valid email address">
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sex:</td>
+                <td>
+                    <div class="formstyle" id="sex">
+                        <label>
+                            <input type="radio" name="formsex" id="male" value="Male" title="Select if you are male"> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="formsex" id="female" value="Female" title="Select if you are female"> Female
+                        </label>
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Language:</td>
+                <td>
+                    <label>
+                        <div class="formstyle" id="language">
+                            <input type="radio" name="formlanguage" id="english" value="English" title="Select if you prefer English"> English
+                            <input type="radio" name="formlanguage" id="non-english" value="Non-English" title="Select if you prefer other languages"> Non-English
+                            <b><span class="formerror"></span></b>
+                        </div>
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="about">About:</label></td>
+                <td>
+                    <div class="formstyle" id="about">
+                        <textarea name="formabout" id="about" cols="1" rows="1" 
+                                  placeholder="Tell us about yourself" 
+                                  title="Provide some details about yourself"></textarea>
+                        <b><span class="formerror"></span></b>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="submit" value="Submit" title="Submit the form">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
